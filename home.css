@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header img {
+    width: 80px;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+header button {
+    border: none;
+    padding: 0.8em;
+    border-radius: 10px;
+}
+
+body {
+    padding-top: 70px;
+    background: rgb(219, 219, 219);
+}
+
+footer {
+    margin: 5rem 0 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: gray;
+}
