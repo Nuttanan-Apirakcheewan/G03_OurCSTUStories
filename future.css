@@ -11,6 +11,32 @@
 body {
     font-family: "Work Sans", sans-serif;
     line-height: 1.6;
+    background: linear-gradient(135deg, 
+    #eba58d, 
+    #f2c0c1, 
+    #a0b9e0, 
+    #e0e2ed, 
+    #d6cae4, 
+    #f2e0ed, 
+    #f8c9cf, 
+    #fef2c9
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  height: 100vh;
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .nav {
@@ -129,6 +155,8 @@ body {
     display: flex;
 }
 
+
+
 /* Tablet Styles (min-width: 768px) */
 @media (min-width: 768px) {
     .hamburger {
@@ -155,6 +183,16 @@ body {
         padding: 0.8em 1.5em;
         margin-top: 15px;
     }
+/*----------------content--------------------------------------*/
+    .title p{
+    font-size: 38pt;
+    text-align: center;
+    color:#fff;
+    font-weight: 500;
+    text-shadow: 4px 1px 2px #a0b9e0;
+    margin-top: 30px;
+    }
+
 }
 
 /* Desktop Styles (min-width: 1024px) */
@@ -182,4 +220,35 @@ body {
     footer {
         font-size: 1em;
     }
+
+
+    .title p{
+        font-size: 42pt;
+        text-align: center;
+        color:#fff;
+        font-weight: 500;
+        text-shadow: 4px 1px 2px #a0b9e0;
+        
+        }
 }
+
+/*----------------Phone_size_content--------------------------------------*/
+
+
+@media(max-width: 768px){
+    
+    .title p{
+        font-size: 32pt;
+        text-align: center;
+        color:#fff;
+        font-weight: 500;
+        text-shadow: 4px 1px 2px #a0b9e0;
+        margin-top:40px;
+        
+        }
+}
+
+
+
+
+
