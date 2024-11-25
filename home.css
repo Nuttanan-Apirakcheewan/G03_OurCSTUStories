@@ -220,7 +220,7 @@ body {
     overflow: hidden;
     margin: 0 auto;
     padding: 10px;
-    margin-top: 100px;
+    margin-top: 20px;
   }
   
   .card-wrapper {
@@ -239,9 +239,9 @@ body {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f1753b;
+    background-color: #a0b9e0;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
     color: #333;
   }
   
@@ -269,13 +269,11 @@ body {
     right: 10px;
   }
   
-  
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     .slider-container {
       width: 80%;
       padding: 5px;
       border-radius: 30px;
-      background-color: #ffffff;
     }
   
     .card-wrapper {
@@ -285,47 +283,114 @@ body {
   
     .card {
       width: 100%;  
-      padding: 250px;
+      padding: 200px;
+      height: 500px;
       border-radius: 30px;
-      border: #ffffff solid 2px;
+    }
+  
+    .name {
+      margin-top: 15px;
+      color: white;
+      font-size: 20px;
     }
   
     .slide-btn {
       width: 35px;
       height: 35px;
     }
+  
+    .card img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 350px;
+      border-radius: 10px;
+    }
+  
+    .title {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-size: 60px;
+    }
   }
+
   
-  
-  @media (min-width: 500px) {
+  @media (min-width: 800px) {
     .card-wrapper {
       flex-wrap: wrap;
       justify-content: space-between;
+      width: 80%;
+    }
+  
+    .card:nth-child(-n+3) {
+      width: calc(33.33% - 10px);
+    }
+  
+    .card:nth-child(n+4):nth-child(-n+5) {
+      width: calc(42% - 10px); 
+      margin: 0 auto;
+    }
+  
+    .card:nth-child(n+6):nth-child(-n+7) {
+      width: calc(42% - 10px); 
+      margin: 0 auto;
     }
   
     .card {
-      width: calc(33.33% - 10px); 
       padding: 20px;
+      border: rgb(255, 255, 255) solid 2px;
     }
   
-    
+    .name {
+      margin-top: 15px;
+      color: white;
+      font-size: 21px;
+    }
+  
     .slide-btn {
       display: none;
+    }
+  
+    .card img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 175px;
+      height: 220px;
+      border-radius: 10px;
+    }
+  
+    .title {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-size: 80px;
     }
   }
   
   .card:nth-child(4) {
-    background-color: #3baef1;  
+    background-color: #cfbfe0;
   }
   
   .card:nth-child(5) {
-    background-color: #3baef1;  
+    background-color: #cfbfe0;
   }
   
   .card:nth-child(6) {
-    background-color: #4ceba9;
+    background-color: #f2c0c1;
   }
   
   .card:nth-child(7) {
-    background-color: #4ceba9;
+    background-color: #f2c0c1;
   }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
