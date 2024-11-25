@@ -234,6 +234,31 @@ body {
 
 /*----------------Phone_size_content--------------------------------------*/
 
+.card {
+    width: 350px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #a0b9e0;
+    border-radius: 15px;
+    border:solid 4px #fff;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.text{
+    font-size: 10pt;
+    text-align: left;
+}
+
+.highlight{
+    font-weight:600;
+    font-size: 12pt;
+}
 
 @media(max-width: 768px){
     
