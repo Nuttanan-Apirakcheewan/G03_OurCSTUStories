@@ -428,7 +428,6 @@ body {
     text-align: right;
   }
 
-
   .radio-group {
     display: flex;
     flex-wrap: wrap;
@@ -442,6 +441,45 @@ body {
     align-items: center;
     gap: 5px;
     font-size: 1em;
+  }
+
+  :root {
+    --color1: #f8c9cf;
+    --color2: #f2d7ee;
+    --color3: #c8f4de;
+    --color4: #fde5b6;
+    --color5: #c9daf8;
+  }
+  
+  .user-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--random-color, #f8c9cf); 
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  #user_name {
+    font-size: 20px;
+    color: #ff5269;
+  }
+
+  .comment-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    object-fit: cover; 
+  }
+
+  .comment-header {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 5px; 
   }
 }
 
@@ -467,7 +505,7 @@ body {
     margin: 0 auto;
   }
 
-  .card:nth-child(8) {
+  .card:nth-child(n+7) {
     display: none;
   }
 
