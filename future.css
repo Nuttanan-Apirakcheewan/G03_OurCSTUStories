@@ -267,6 +267,10 @@ body {
     font-size: 12pt;
 }
 
+.Bigcontainer{
+    margin-left: auto;
+    margin-right: auto;
+}
 .container1{
     display: flex;
     padding-bottom: 40px;
@@ -276,6 +280,7 @@ body {
     display: flex;
     
 }
+
 @media(max-width: 768px){
     
     .title p{
@@ -287,6 +292,66 @@ body {
         margin-top:40px;
         
         }
+
+    .container1{
+        display: block;
+    }    
+
+    .container2{
+        display: block;
+    }
+}
+
+@media(max-width: 368px){
+    .title p{
+        font-size: 28pt;
+        text-align: center;
+        color:#fff;
+        font-weight: 500;
+        text-shadow: 4px 1px 2px #a0b9e0;
+        margin-top:40px;
+        
+    }
+
+    .cardTT{
+        font-size: 12pt;
+    }
+    .card {
+        width: 300px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #a0b9e0;
+        border-radius: 15px;
+        border:solid 4px #fff;
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+        color: #333;
+        margin-top: 20px;
+    }
+    
+    .cardT{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .text{
+        font-size: 8pt;
+        text-align: left;
+    }
+    
+    .highlight{
+        font-weight:600;
+        font-size: 9pt;
+    }
+    
+   
+
+    .img{
+        width:75px
+    }
 }
 
 
