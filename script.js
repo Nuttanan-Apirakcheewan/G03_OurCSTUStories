@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       newCard.className = 'card';
       cardWrapper.appendChild(newCard);
     }
+    
 
     const latestCard = document.querySelector('.card-wrapper .card:last-child');
 

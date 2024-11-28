@@ -308,6 +308,9 @@ body {
   .slide-btn {
     width: 35px;
     height: 35px;
+    background-color: white;
+    color: #333;
+ 
   }
 
   .card img {
