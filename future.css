@@ -248,6 +248,9 @@ body {
     border:solid 4px #fff;
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
     color: #333;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
 }
 
 .cardT{
@@ -264,7 +267,12 @@ body {
     font-size: 12pt;
 }
 
-.container{
+.container1{
+    display: flex;
+    padding-bottom: 40px;
+}
+
+.container2{
     display: flex;
     
 }
