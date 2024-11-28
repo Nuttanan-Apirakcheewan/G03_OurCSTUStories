@@ -209,6 +209,12 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+  .menu button {
+    display: none;
+  }
+}
+
 /*--------------------------------Content-------------------------------------------*/
 .slider-container {
     position: relative;
@@ -307,13 +313,33 @@ body {
       height: 350px;
       border-radius: 10px;
     }
-  
-    .title {
-      margin-top: 50px;
+    
+    .button-container {
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 20px;
       display: flex;
       justify-content: center;
-      color: white;
-      font-size: 60px;
+      gap: 30px;
+    }
+    
+    .button-container button {
+      padding: 20px;
+      border-radius: 30px;
+      font-size: 20px;
+      background-color: #f8f9fa; 
+      border: none; 
+      transition: border 0.3s, background-color 0.5s;
+    }
+    
+    .button-container button:hover {
+      border: #eba58d solid 2px; 
+      background-color: #fef3ed; 
+      cursor: pointer; 
+    }
+    
+    .title{
+      display: none;
     }
   }
 
@@ -362,14 +388,20 @@ body {
       height: 220px;
       border-radius: 10px;
     }
-  
-    .title {
-      margin-top: 50px;
+
+    .button-container
+    {
+      display : none;
+    }
+
+    .title 
+    {
+      font-size: 80px;
+      color: white;
       display: flex;
       justify-content: center;
-      color: white;
-      font-size: 80px;
     }
+  
   }
   
   .card:nth-child(4) {
