@@ -237,6 +237,10 @@ body {
   width: max-content;
 }
 
+.spacer{
+  padding: 50px;
+}
+
 .card {
   width: 300px;
   flex-shrink: 0;

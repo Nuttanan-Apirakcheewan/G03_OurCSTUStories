@@ -42,3 +42,15 @@ window.addEventListener('resize', () => {
     updateSliderPosition();
   }
 });
+
+participant.addEventListener('click', () => {
+    currentIndex = 0;
+    updateSliderPosition();
+  
+});
+
+Guestbook.addEventListener('click', () => {
+  currentIndex = 7;
+  updateSliderPosition();
+
+});
