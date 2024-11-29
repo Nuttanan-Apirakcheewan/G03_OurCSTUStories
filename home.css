@@ -237,7 +237,7 @@ body {
   width: max-content;
 }
 
-.spacer{
+.spacer {
   padding: 50px;
 }
 
@@ -280,6 +280,10 @@ body {
   right: 10px;
 }
 
+img {
+  object-fit: cover !important;
+}
+
 @media (max-width: 800px) {
   .slider-container {
     width: 80%;
@@ -310,7 +314,7 @@ body {
     height: 35px;
     background-color: white;
     color: #333;
- 
+
   }
 
   .card img {
@@ -453,19 +457,19 @@ body {
     --color4: #fde5b6;
     --color5: #c9daf8;
   }
-  
+
   .user-comment {
     display: flex;
     flex-direction: column;
     justify-content: left;
     padding: 10px;
     border-radius: 25px;
-    background-color: var(--random-color, #f8c9cf); 
+    background-color: var(--random-color, #f8c9cf);
     color: white;
     font-size: 15px;
     margin-bottom: 10px;
   }
-  
+
   #user_name {
     font-size: 20px;
     color: #ff5269;
@@ -474,15 +478,15 @@ body {
   .comment-header img {
     width: 40px;
     height: 40px;
-    border-radius: 50%; 
-    object-fit: cover; 
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   .comment-header {
     display: flex;
-    align-items: center; 
-    gap: 10px; 
-    margin-bottom: 5px; 
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
   }
 
   #sidebar
