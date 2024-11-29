@@ -63,58 +63,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let lastUsedColorIndex = -1;
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault(); 
-
-    const name = document.querySelector('#nameTh').value + ' ' + document.querySelector('#surnameTh').value;
-    const device = document.querySelector('input[name="userDevice"]:checked').value;
-    const comment = document.querySelector('#comment').value;
-    const colorVariables = ['--color1', '--color2', '--color3', '--color4', '--color5'];
-
-    let randomIndex;
-    do {
-      randomIndex = Math.floor(Math.random() * colorVariables.length);
-    } while (randomIndex === lastUsedColorIndex);
-
-    lastUsedColorIndex = randomIndex;
-    const randomColor = colorVariables[randomIndex];
-
-    let randomPictureIndex;
-    do {
-      randomPictureIndex = Math.floor(Math.random() * profilePictures.length);
-    } while (randomPictureIndex === lastUsedPictureIndex);
-
-    const randomPicture = profilePictures[randomPictureIndex];
-    lastUsedPictureIndex = randomPictureIndex; 
-
-    commentsBuffer.push({ name, device, comment });
-
-    if (commentsBuffer.length % 3 === 1) {
-      const newCard = document.createElement('div');
-      newCard.className = 'card';
-      cardWrapper.appendChild(newCard);
-    }
-    
-
-    const latestCard = document.querySelector('.card-wrapper .card:last-child');
-
-    const userComment = document.createElement('div');
-    userComment.className = 'user-comment';
-    userComment.style.setProperty('--random-color', `var(${randomColor})`);
-    userComment.innerHTML = `
-      <div class="comment-header">
-        <img src="${randomPicture}" alt="Profile Picture">
-        <p id="user_name"><strong>${name}</strong></p>
-      </div>
-      <p><strong>Device:</strong> ${device}</p>
-      <p><strong>Comment:</strong> ${comment}</p>
-    `;
-
-    latestCard.appendChild(userComment);
-
-    currentIndex = totalCards() - 1;
-    updateSliderPosition();
-
-    form.reset();
+  document.querySelectorAll('.guestForm').forEach(form => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); 
+  
+      const isDesktopForm = form.id === 'desktopForm';
+      const isMobileForm = form.id === 'mobileForm';
+  
+   
+      const name = form.querySelector('#nameTh').value + ' ' + form.querySelector('#surnameTh').value;
+      const device = form.querySelector('input[name="userDevice"]:checked').value;
+      const comment = form.querySelector('#comment').value;
+      const email = form.querySelector('#email').value;
+  
+      const colorVariables = ['--color1', '--color2', '--color3', '--color4', '--color5'];
+  
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * colorVariables.length);
+      } while (randomIndex === lastUsedColorIndex);
+  
+      lastUsedColorIndex = randomIndex;
+      const randomColor = colorVariables[randomIndex];
+  
+      let randomPictureIndex;
+      do {
+        randomPictureIndex = Math.floor(Math.random() * profilePictures.length);
+      } while (randomPictureIndex === lastUsedPictureIndex);
+  
+      const randomPicture = profilePictures[randomPictureIndex];
+      lastUsedPictureIndex = randomPictureIndex; 
+  
+      commentsBuffer.push({ name, device, comment });
+  
+      if (commentsBuffer.length % 3 === 1) {
+        const newCard = document.createElement('div');
+        newCard.className = 'card';
+        cardWrapper.appendChild(newCard);
+      }
+      
+      const latestCard = document.querySelector('.card-wrapper .card:last-child');
+  
+      const userComment = document.createElement('div');
+      userComment.className = 'user-comment';
+      userComment.style.setProperty('--random-color', `var(${randomColor})`);
+      userComment.innerHTML = `
+        <div class="comment-header">
+          <img src="${randomPicture}" alt="Profile Picture">
+          <p id="user_name"><strong>${name}</strong></p>
+        </div>
+        <p><strong>Device:</strong> ${device}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Comment:</strong> ${comment}</p>
+      `;
+  
+      latestCard.appendChild(userComment);
+  
+ 
+      if (isMobileForm) {
+        currentIndex = totalCards() - 1;
+        updateSliderPosition();
+      }
+  
+      form.reset();
+    });
   });
+
+document.getElementById("guestbookButton").addEventListener("click", function() {
+  const sidebar = document.getElementById("sidebar");
+  
+
+  if (sidebar.style.left === "0px") {
+    sidebar.style.left = "-350px";  
+  } else {
+    sidebar.style.left = "0px";  
+  }
+});
 });

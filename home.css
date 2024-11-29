@@ -484,6 +484,12 @@ body {
     gap: 10px; 
     margin-bottom: 5px; 
   }
+
+  #sidebar
+  {
+    display: none;
+  }
+
 }
 
 
@@ -508,7 +514,7 @@ body {
     margin: 0 auto;
   }
 
-  .card:nth-child(n+7) {
+  .card:nth-child(n+8) {
     display: none;
   }
 
@@ -545,6 +551,41 @@ body {
     color: white;
     display: flex;
     justify-content: center;
+  }
+
+  #sidebar
+  {
+    position: fixed;
+    top: 0px;
+    left: -350px; 
+    width: 350px;
+    height: 100%;
+    background-color: #f2e0ed;
+    opacity: 95%;
+    color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
+  }
+  #sidebar form
+  {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #a0c3ff;
+    border-radius: 10%;
+  }
+
+  form button {
+    background-color: #fef2c9;
+    align-items: center;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0px;
+    width: 100px;
+    height: 2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
 
 }
