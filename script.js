@@ -103,10 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       
       const latestCard = document.querySelector('.card-wrapper .card:last-child');
+      const lastestcomment = document.querySelector('.sidebar');
   
       const userComment = document.createElement('div');
+      const userCommentDesktop = document.createElement('div');
+  
       userComment.className = 'user-comment';
+      userCommentDesktop.className = 'user-comment-desktop';
+     
+      
       userComment.style.setProperty('--random-color', `var(${randomColor})`);
+      userCommentDesktop.style.setProperty('--random-color', `var(${randomColor})`);
       userComment.innerHTML = `
         <div class="comment-header">
           <img src="${randomPicture}" alt="Profile Picture">
@@ -116,15 +123,26 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Comment:</strong> ${comment}</p>
       `;
+
+      userCommentDesktop.innerHTML = `
+      <div class="comment-header">
+        <img src="${randomPicture}" alt="Profile Picture">
+        <p id="user_name"><strong>${name}</strong></p>
+      </div>
+      <p><strong>Device:</strong> ${device}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Comment:</strong> ${comment}</p>
+    `;
   
       latestCard.appendChild(userComment);
+      lastestcomment.appendChild(userCommentDesktop);
   
  
       if (isMobileForm) {
         currentIndex = totalCards() - 1;
         updateSliderPosition();
       }
-  
+      
       form.reset();
     });
   });
