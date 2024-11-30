@@ -23,10 +23,9 @@
         <li><a href="journey.html">Journey</a></li>
         <li><a href="future.html">Future</a></li>
       </ul>
-      <button><a href="#">Guestbook</a></button>
+      <button id="guestbookButton"><a>Guestbook</a></button>
     </nav>
   </header>
-
 
   <div class="button-container">
     <button id="participant">Participant</button>
@@ -96,41 +95,73 @@
           </p>
         </div>
       </div>
-      <div class="card">
-        <form id="guestForm" action="" method="">
-          <legend>Guest Form</legend>
-          <section>
-            <label for="nameTh">Name-Surname:</label>
-            <div>
-              <input type="text" name="nameTh" id="nameTh" required placeholder="Name">
-              <input type="text" name="surnameTh" id="surnameTh" required placeholder="Surname">
+        <div class="card">
+          <form id="mobileForm" class="guestForm" action="" method="">
+            <legend>Guest Form</legend>
+            <section>
+              <label for="nameTh">Name-Surname:</label>
+              <div>
+                <input type="text" name="nameTh" id="nameTh" required placeholder="Name">
+                <input type="text" name="surnameTh" id="surnameTh" required placeholder="Surname">
+              </div>
+            </section>
+            <section>
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required placeholder="Your email address">
+            </section>
+            <section class="radios">
+              <label for="userDevice">Your device:</label>
+              <div class="radio-group">
+                <label><input type="radio" name="userDevice" value="Computer" checked> Desktop</label>
+                <label><input type="radio" name="userDevice" value="Tablet"> Tablet</label>
+                <label><input type="radio" name="userDevice" value="Smartphone"> Smartphone</label>
+              </div>
+            </section>
+            <section>
+              <label for="comment">Comment:</label>
+              <textarea name="comment" id="comment" placeholder="Your comment(max-length 30 letters)" required maxlength="30"></textarea>
+            </section>
+            <div class="sub-container">
+              <button id="submitButton" type="submit">Submit</button>
             </div>
-          </section>
-          <section>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required placeholder="Your email address">
-          </section>
-          <section class="radios">
-            <label for="userDevice">Your device:</label>
-            <div class="radio-group">
-              <label><input type="radio" name="userDevice" value="computer" checked> Desktop</label>
-              <label><input type="radio" name="userDevice" value="tablet"> Tablet</label>
-              <label><input type="radio" name="userDevice" value="smartphone"> Smartphone</label>
-            </div>
-          </section>
-          <section>
-            <label for="comment">Comment:</label>
-            <textarea name="comment" id="comment" placeholder="Your comment(max-length 30 letters)" required maxlength="30"></textarea>
-          </section>
-          <div class="sub-container">
-            <button id="submitButton" type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
+          </form>
+        </div>
     </div>
 
     <div id="prev-btn" class="slide-btn">⬅️</div>
     <div id="next-btn" class="slide-btn">➡️</div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <form id="desktopForm"  class="guestForm" action="" method="">
+      <legend>Guest Form</legend>
+      <section>
+        <label for="nameTh">Name-Surname:</label>
+        <div>
+          <input type="text" name="nameTh" id="nameTh" required placeholder="Name">
+          <input type="text" name="surnameTh" id="surnameTh" required placeholder="Surname">
+        </div>
+      </section>
+      <section>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required placeholder="Your email address">
+      </section>
+      <section class="radios">
+        <label for="userDevice">Your device:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="userDevice" value="Computer" checked> Desktop</label>
+          <label><input type="radio" name="userDevice" value="Tablet"> Tablet</label><br>
+          <label><input type="radio" name="userDevice" value="Smartphone"> Smartphone</label>
+        </div>
+      </section>
+      <section>
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" placeholder="Your comment(max-length 30 letters)" required maxlength="30"></textarea>
+      </section>
+      <div class="sub-container">
+        <button id="submitButton" type="submit">Submit</button>
+      </div>
+    </form>
   </div>
 
   <script src="script.js"></script>
