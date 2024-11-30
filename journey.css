@@ -223,27 +223,30 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     position: relative;
     padding: 20px;
   }
   
   /* สไตล์สำหรับข้อความ */
-.english_skill {
+.rec-head {
     font-size: 28pt;
     font-weight: 700;
     color: #333;
     text-align: center;
 }
 
-.english_skill_th {
+.rec-head-th {
     font-size: 20pt;
     font-weight: 600;
     color: #333;
     text-align: center;
 }
 
-.english_skill_th1 {
+.rec-head-th1 {
     margin: 10px 20px;
     color: #333;
     text-align: center;
