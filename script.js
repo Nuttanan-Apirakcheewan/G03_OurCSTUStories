@@ -118,3 +118,74 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+
+//----------------------------Journey page-----------------------------
+
+const profileImgs = document.querySelectorAll('.profile-img');
+const profileCard = document.getElementById('profile-card');
+const closeBtn = document.getElementById('close-btn');
+const backgroundOverlay = document.createElement('div');
+backgroundOverlay.classList.add('background-overlay');
+document.body.appendChild(backgroundOverlay);
+
+// ข้อมูลตัวอย่าง (โปรไฟล์)
+const profiles = [
+  {
+    image: 'recources/shai_pic-circle.png',
+    name: 'Shai',
+    description: '<b>ความคิดเห็น:</b> เป็นทักษะที่สำคัญต่อการทำงานในสายงานคอมพิวเตอร์ รวมไปถึงเป็นภาษาหลักที่ใข้ในการสื่อสาร<br><b>แนวทางการพัฒนา:</b> เรียนรู้และพัฒนาอยู่ตลอดเวลา อ่านหนังสือภาษาอังกฤษ หรือลองสื่อสารกับเจ้าของภาษา'
+  },
+  {
+    image: 'recources/chin_pic-circle.png',
+    name: 'Chin',
+    description: '<b>ความคิดเห็น:</b> เป็นทักษะจำเป็นทำให้มีแหล่งหาความรู้กว้างขึ้น<br><b>แนวทางการพัฒนา:</b> พยายามนำมาใช้ในชีวิตประจำวัน เขียนตอบการบ้านเป็นภาษาอังกฤษ'
+  },
+  {
+    image: 'recources/mint_pic-circle.png',
+    name: 'Mint',
+    description: '<b>ความคิดเห็น:</b> เป็นทักษะที่สำคัญมาก เพราะส่วนใหญ่การอ่านหรือเขียนโค้ดจะใช้ภาษาอังกฤษ<br><b>แนวทางการพัฒนา:</b> อ่านบทความ หรือฝึกเขียนบ่อย ๆ'
+  },
+  {
+    image: 'chain_pic-circle.png',
+    name: 'Chain',
+    description: '<b>ความคิดเห็น:</b> ในการพัฒนาซอฟแวร์จำเป็นต้องทำงานเป็นทีม <br><b>แนวทางการพัฒนา:</b> ฝึกทำงานกับทีมให้บ่อย'
+  }
+];
+
+// ฟังก์ชันแสดงการ์ดโปรไฟล์
+const showProfileCard = (index) => {
+  profileCard.style.display = 'block';
+  profileCard.style.zIndex = '1001'; // ให้การ์ดอยู่ข้างหน้า
+  profileCard.querySelector('.profile-img-card').src = profiles[index].image;
+  profileCard.querySelector('#profile-name').textContent = profiles[index].name;
+  profileCard.querySelector('#profile-description').innerHTML = profiles[index].description;
+
+  // แสดงพื้นหลังที่มืดลง
+  profileCard.classList.add('show');
+  backgroundOverlay.style.display = 'block';
+};
+
+// ฟังก์ชันซ่อนการ์ด
+const hideProfileCard = () => {
+  profileCard.style.display = 'none';
+  backgroundOverlay.style.display = 'none';
+};
+
+// เมื่อคลิกรูปภาพ
+profileImgs.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    showProfileCard(index);
+  });
+});
+
+// เมื่อคลิกที่ปุ่มปิดการ์ด
+closeBtn.addEventListener('click', () => {
+  hideProfileCard();
+});
+
+// เมื่อคลิกที่พื้นหลัง
+backgroundOverlay.addEventListener('click', () => {
+  hideProfileCard();
+});
+
+//------------------------------Journey page----------------------------------------

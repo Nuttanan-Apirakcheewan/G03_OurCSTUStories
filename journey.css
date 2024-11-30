@@ -259,17 +259,103 @@ body {
     margin-top: 20px;
 }
 
-.shai-image:hover {
-    transform: scale(1.05);
+.profile-img {
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
-.chin-image:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* ขยายรูปเมื่อวางเคอร์เซอร์ */
+.profile-img:hover {
+    transform: scale(1.1);
 }
 
-.mint-image:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* การ์ดโปรไฟล์ */
+.profile-card {
+    display: none; /* ซ่อนการ์ดโดยเริ่มต้น */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000; /* ให้การ์ดอยู่ด้านหน้า */
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    animation: none;
+}
+
+@keyframes zoomIn {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+    }
+    70% {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+}
+
+.profile-card.show {
+    display: block;
+    animation: zoomIn 0.4s ease-out; /* ซูมพร้อม Animation */
+  }
+
+/* สไตล์ของการ์ด */
+.profile-card .card-content {
+    position: relative;
+    
+}
+
+.profile-card .profile-img-card {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#profile-name {
+    color: #333;
+}
+
+#profile-description {
+    text-align: left; /* จัดข้อความชิดซ้าย */
+    font-weight: normal; /* คงค่าปกติ (หรือตัวหนาหากต้องการ) */
+    margin: 10px 0; /* เพิ่มระยะห่างระหว่างข้อความ */
+    line-height: 1.5; /* ปรับระยะห่างบรรทัดให้ดูอ่านง่าย */
+    letter-spacing: 0.5px;
+    color: #333;
+  }
+  
+
+/* ปุ่มปิดการ์ด */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ส่วนของพื้นหลังที่มืด */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* สีดำที่โปร่งใส */
+    z-index: 999; /* ให้มันอยู่ใต้การ์ด */
+    display: none; /* ซ่อนพื้นหลังโดยเริ่มต้น */
+}
+
+/* เมื่อวางเคอร์เซอร์ที่รูปภาพ */
+.profile-img:hover + #profile-card, 
+.profile-img:hover + #profile-card + .background-overlay {
+    display: block;
 }
