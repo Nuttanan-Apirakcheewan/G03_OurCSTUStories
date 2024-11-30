@@ -362,3 +362,15 @@ body {
 .profile-img:hover + #profile-card + .background-overlay {
     display: block;
 }
+
+nav.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
