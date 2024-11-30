@@ -11,6 +11,33 @@
 body {
     font-family: "Work Sans", sans-serif;
     line-height: 1.6;
+    background: linear-gradient(135deg,
+      #eba58d,
+      #f2c0c1,
+      #a0b9e0,
+      #e0e2ed,
+      #d6cae4,
+      #f2e0ed,
+      #f8c9cf,
+      #fef2c9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    height: 100vh;
+
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .nav {
@@ -182,4 +209,67 @@ body {
     footer {
         font-size: 1em;
     }
+}
+
+/*----------------------------content-------------------------------*/
+
+/* สไตล์สำหรับกรอบสี่เหลี่ยม */
+.rectangle {
+    width: 500px; /* ความกว้างของกรอบ */
+    height: 500px; /* ความสูงของกรอบ */
+    border: 2px solid #ffffff; /* เส้นขอบ */
+    border-radius: 10px; /* มุมโค้งมน */
+    background-color: #ffffff; /* สีพื้นหลัง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+  }
+  
+  /* สไตล์สำหรับข้อความ */
+.english_skill {
+    font-size: 28pt;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.english_skill_th {
+    font-size: 20pt;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.english_skill_th1 {
+    margin: 10px 20px;
+    color: #333;
+    text-align: center;
+}
+
+.img {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.shai-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.chin-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.mint-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
