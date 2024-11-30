@@ -213,14 +213,13 @@ body {
 
 /*----------------------------content-------------------------------*/
 
-/* สไตล์สำหรับกรอบสี่เหลี่ยม */
 .rectangle {
-    width: 500px; /* ความกว้างของกรอบ */
-    height: 500px; /* ความสูงของกรอบ */
-    border: 2px solid #ffffff; /* เส้นขอบ */
-    border-radius: 10px; /* มุมโค้งมน */
-    background-color: #ffffff; /* สีพื้นหลัง */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+    width: 500px;
+    height: 500px;
+    border: 2px solid #a0b9e0;
+    border-radius: 10px;
+    background-color: #84a1cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     margin-top: 0;
