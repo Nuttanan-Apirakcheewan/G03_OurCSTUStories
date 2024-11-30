@@ -186,8 +186,6 @@ body {
 
 /* Desktop Styles (min-width: 1024px) */
 @media (min-width: 1024px) {
-
-
     .menu ul {
         justify-content: center;
         flex: 1;
@@ -230,7 +228,6 @@ body {
     padding: 20px;
   }
   
-  /* สไตล์สำหรับข้อความ */
 .rec-head {
     font-size: 28pt;
     font-weight: 700;
@@ -266,14 +263,12 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* ขยายรูปเมื่อวางเคอร์เซอร์ */
 .profile-img:hover {
     transform: scale(1.1);
 }
 
-/* การ์ดโปรไฟล์ */
 .profile-card {
-    display: none; /* ซ่อนการ์ดโดยเริ่มต้น */
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -282,7 +277,7 @@ body {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    z-index: 1000; /* ให้การ์ดอยู่ด้านหน้า */
+    z-index: 1000;
     width: 300px;
     text-align: center;
     box-sizing: border-box;
@@ -305,10 +300,9 @@ body {
 
 .profile-card.show {
     display: block;
-    animation: zoomIn 0.4s ease-out; /* ซูมพร้อม Animation */
+    animation: zoomIn 0.4s ease-out;
   }
 
-/* สไตล์ของการ์ด */
 .profile-card .card-content {
     position: relative;
     
@@ -326,16 +320,14 @@ body {
 }
 
 #profile-description {
-    text-align: left; /* จัดข้อความชิดซ้าย */
-    font-weight: normal; /* คงค่าปกติ (หรือตัวหนาหากต้องการ) */
-    margin: 10px 0; /* เพิ่มระยะห่างระหว่างข้อความ */
-    line-height: 1.5; /* ปรับระยะห่างบรรทัดให้ดูอ่านง่าย */
+    text-align: left;
+    font-weight: normal;
+    margin: 10px 0;
+    line-height: 1.5;
     letter-spacing: 0.5px;
     color: #333;
   }
   
-
-/* ปุ่มปิดการ์ด */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -344,19 +336,17 @@ body {
     cursor: pointer;
 }
 
-/* ส่วนของพื้นหลังที่มืด */
 .background-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* สีดำที่โปร่งใส */
-    z-index: 999; /* ให้มันอยู่ใต้การ์ด */
-    display: none; /* ซ่อนพื้นหลังโดยเริ่มต้น */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: none;
 }
 
-/* เมื่อวางเคอร์เซอร์ที่รูปภาพ */
 .profile-img:hover + #profile-card, 
 .profile-img:hover + #profile-card + .background-overlay {
     display: block;
@@ -367,9 +357,3 @@ nav.menu {
     justify-content: flex-end;
 }
 
-@media (min-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }

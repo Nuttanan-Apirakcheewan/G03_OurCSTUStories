@@ -192,38 +192,32 @@ const profiles = [
   }
 ];
 
-// ฟังก์ชันแสดงการ์ดโปรไฟล์
 const showProfileCard = (index) => {
   profileCard.style.display = 'block';
-  profileCard.style.zIndex = '1001'; // ให้การ์ดอยู่ข้างหน้า
+  profileCard.style.zIndex = '1001';
   profileCard.querySelector('.profile-img-card').src = profiles[index].image;
   profileCard.querySelector('#profile-name').textContent = profiles[index].name;
   profileCard.querySelector('#profile-description').innerHTML = profiles[index].description;
 
-  // แสดงพื้นหลังที่มืดลง
   profileCard.classList.add('show');
   backgroundOverlay.style.display = 'block';
 };
 
-// ฟังก์ชันซ่อนการ์ด
 const hideProfileCard = () => {
   profileCard.style.display = 'none';
   backgroundOverlay.style.display = 'none';
 };
 
-// เมื่อคลิกรูปภาพ
 profileImgs.forEach((img, index) => {
   img.addEventListener('click', () => {
     showProfileCard(index);
   });
 });
 
-// เมื่อคลิกที่ปุ่มปิดการ์ด
 closeBtn.addEventListener('click', () => {
   hideProfileCard();
 });
 
-// เมื่อคลิกที่พื้นหลัง
 backgroundOverlay.addEventListener('click', () => {
   hideProfileCard();
 });
