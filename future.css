@@ -183,7 +183,7 @@ body {
         padding: 0.8em 1.5em;
         margin-top: 15px;
     }
-/*----------------content--------------------------------------*/
+
     .title p{
     font-size: 38pt;
     text-align: center;
@@ -234,53 +234,16 @@ body {
 
 /*----------------Phone_size_content--------------------------------------*/
 
-
-
-
-
 .highlight{
     font-weight:600;
     font-size: 12pt;
 }
 
-.Bigcontainer{
-    margin-left: auto;
-    margin-right: auto;
-}
-.container1{
-    display: flex;
-    padding-bottom: 20px;
-}
 
-.container2{
-    display: flex;
-    
-}
 
-@media(max-width: 768px){
-    
+
     .title p{
-        font-size: 32pt;
-        text-align: center;
-        color:#fff;
-        font-weight: 500;
-        text-shadow: 4px 1px 2px #a0b9e0;
-        margin-top:40px;
-        
-        }
-
-    .container1{
-        display: block;
-    }    
-
-    .container2{
-        display: block;
-    }
-}
-
-@media(max-width: 368px){
-    .title p{
-        font-size: 28pt;
+        font-size: 42pt;
         text-align: center;
         color:#fff;
         font-weight: 500;
@@ -289,7 +252,7 @@ body {
         
     }
 
-}
+
 
 main {
     display: flex;
@@ -375,6 +338,8 @@ main {
     letter-spacing: 1px;
 } 
 
+
+
 .card:hover .front {
     transform: perspective(600px) rotateY(180deg);
 }
@@ -439,11 +404,17 @@ main {
     padding-top: 10px;
 }
 
-.space2{
+.space2 {
     padding-top: 30px;
     padding-left: 30px;
+
 }
 
+.space3 {
+    padding-top: 20px;
+    padding-left: 50px;
+
+}
 
 
 
