@@ -12,32 +12,32 @@ body {
     font-family: "Work Sans", sans-serif;
     line-height: 1.6;
     background: linear-gradient(135deg,
-      #eba58d,
-      #f2c0c1,
-      #a0b9e0,
-      #e0e2ed,
-      #d6cae4,
-      #f2e0ed,
-      #f8c9cf,
-      #fef2c9);
+            #eba58d,
+            #f2c0c1,
+            #a0b9e0,
+            #e0e2ed,
+            #d6cae4,
+            #f2e0ed,
+            #f8c9cf,
+            #fef2c9);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
-    height: 100vh;
+    height: 100%;
 
 }
 
 @keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
 
-  50% {
-    background-position: 100% 50%;
-  }
+    50% {
+        background-position: 100% 50%;
+    }
 
-  100% {
-    background-position: 0% 50%;
-  }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .nav {
@@ -226,8 +226,8 @@ body {
     margin-bottom: 30px;
     position: relative;
     padding: 20px;
-  }
-  
+}
+
 .rec-head {
     font-size: 28pt;
     font-weight: 700;
@@ -286,26 +286,28 @@ body {
 
 @keyframes zoomIn {
     0% {
-      transform: translate(-50%, -50%) scale(0.5);
-      opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
     }
+
     70% {
-      transform: translate(-50%, -50%) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.1);
     }
+
     100% {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
     }
 }
 
 .profile-card.show {
     display: block;
     animation: zoomIn 0.4s ease-out;
-  }
+}
 
 .profile-card .card-content {
     position: relative;
-    
+
 }
 
 .profile-card .profile-img-card {
@@ -326,8 +328,8 @@ body {
     line-height: 1.5;
     letter-spacing: 0.5px;
     color: #333;
-  }
-  
+}
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -347,8 +349,8 @@ body {
     display: none;
 }
 
-.profile-img:hover + #profile-card, 
-.profile-img:hover + #profile-card + .background-overlay {
+.profile-img:hover+#profile-card,
+.profile-img:hover+#profile-card+.background-overlay {
     display: block;
 }
 
@@ -356,4 +358,3 @@ nav.menu {
     display: flex;
     justify-content: flex-end;
 }
-

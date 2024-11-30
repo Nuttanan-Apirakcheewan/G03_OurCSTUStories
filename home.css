@@ -22,7 +22,7 @@ body {
       #fef2c9);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
-  height: 100vh;
+  height: 100%;
 
 }
 
@@ -489,8 +489,7 @@ img {
     margin-bottom: 5px;
   }
 
-  #sidebar
-  {
+  #sidebar {
     display: none;
   }
 
@@ -557,11 +556,10 @@ img {
     justify-content: center;
   }
 
-  #sidebar
-  {
+  #sidebar {
     position: fixed;
     top: 0px;
-    left: -350px; 
+    left: -350px;
     width: 350px;
     height: 100%;
     background-color: #f2e0ed;
@@ -571,8 +569,8 @@ img {
     padding: 20px;
     overflow: scroll;
   }
-  #sidebar form
-  {
+
+  #sidebar form {
     margin-top: 100px;
     padding: 20px;
     background-color: #a0c3ff;

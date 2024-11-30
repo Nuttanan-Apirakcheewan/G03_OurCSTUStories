@@ -11,19 +11,18 @@
 body {
     font-family: "Work Sans", sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, 
-    #eba58d, 
-    #f2c0c1, 
-    #a0b9e0, 
-    #e0e2ed, 
-    #d6cae4, 
-    #f2e0ed, 
-    #f8c9cf, 
-    #fef2c9
-  );
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
-  height: 100vh;
+    background: linear-gradient(135deg,
+            #eba58d,
+            #f2c0c1,
+            #a0b9e0,
+            #e0e2ed,
+            #d6cae4,
+            #f2e0ed,
+            #f8c9cf,
+            #fef2c9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    height: 100%;
 
 }
 
@@ -31,9 +30,11 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -184,13 +185,13 @@ body {
         margin-top: 15px;
     }
 
-    .title p{
-    font-size: 38pt;
-    text-align: center;
-    color:#fff;
-    font-weight: 500;
-    text-shadow: 4px 1px 2px #a0b9e0;
-    margin-top: 30px;
+    .title p {
+        font-size: 38pt;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        text-shadow: 4px 1px 2px #a0b9e0;
+        margin-top: 30px;
     }
 
 }
@@ -222,35 +223,35 @@ body {
     }
 
 
-    .title p{
+    .title p {
         font-size: 42pt;
         text-align: center;
-        color:#fff;
+        color: #fff;
         font-weight: 500;
         text-shadow: 4px 1px 2px #a0b9e0;
-        
-        }
+
+    }
 }
 
 /*----------------Phone_size_content--------------------------------------*/
 
-.highlight{
-    font-weight:600;
+.highlight {
+    font-weight: 600;
     font-size: 12pt;
 }
 
 
 
 
-    .title p{
-        font-size: 42pt;
-        text-align: center;
-        color:#fff;
-        font-weight: 500;
-        text-shadow: 4px 1px 2px #a0b9e0;
-        margin-top:40px;
-        
-    }
+.title p {
+    font-size: 42pt;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 4px 1px 2px #a0b9e0;
+    margin-top: 40px;
+
+}
 
 
 
@@ -260,7 +261,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    
+
 }
 
 
@@ -280,7 +281,7 @@ main {
     border-radius: 10px;
     overflow: hidden;
     transition: .5s;
-    
+
 }
 
 .card .front {
@@ -302,7 +303,7 @@ main {
     height: 45px;
     line-height: 45px;
     color: #fff;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     text-align: center;
 }
 
@@ -336,7 +337,7 @@ main {
 
 .card .back p {
     letter-spacing: 1px;
-} 
+}
 
 
 
@@ -348,59 +349,59 @@ main {
     transform: perspective(600px) rotateY(360deg);
 }
 
-.highlight{
+.highlight {
     font-weight: 600;
 }
 
-#DS{
+#DS {
     background-color: #a0b9e0;
 }
 
-#SE{
+#SE {
     background-color: #f8c9cf;
 }
 
-#SD{
+#SD {
     background-color: #f2e0ed;
 }
 
-#PGM{
-    background-color: #eba58d ;
+#PGM {
+    background-color: #eba58d;
 }
 
-#BDS{
+#BDS {
     background-color: #5f769b;
 }
 
-#BSE{
+#BSE {
     background-color: #c67f88;
 }
 
-#BSD{
+#BSD {
     background-color: #b582a6;
 }
 
-#BPGM{
-    background-color: #b25d41 ;
+#BPGM {
+    background-color: #b25d41;
 }
 
-.text{
+.text {
     margin: 20px;
 }
 
-.person{
+.person {
     display: flex;
 }
 
-.person p{
+.person p {
     font-size: 8pt;
     text-align: center;
     margin-top: 15px;
     margin-left: 5px;
-    
+
 }
 
-.space{
+.space {
     padding-top: 10px;
 }
 
@@ -415,9 +416,3 @@ main {
     padding-left: 50px;
 
 }
-
-
-
-
-
-
