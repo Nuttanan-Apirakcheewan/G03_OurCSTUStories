@@ -292,7 +292,7 @@ img {
   }
 
   .card-wrapper {
-    gap: 15px;
+    gap: 0px;
     width: max-content;
   }
 
