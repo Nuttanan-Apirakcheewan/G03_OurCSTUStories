@@ -23,6 +23,8 @@ body {
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
     height: 100%;
+    overflow-x: hidden;
+
 
 }
 
@@ -261,9 +263,9 @@ footer{
     }
   
     .contact
-  {
-    margin-top: -60px;
-  }
+    {
+        margin-top: -60px;
+    }
   }
 
 
