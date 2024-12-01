@@ -140,6 +140,7 @@ body {
     margin-bottom: 15px;
     position: relative;
     right: -500px;
+    display: none;
 }
 
 .menu button a {
@@ -155,6 +156,7 @@ body {
 /* Active Menu Styles */
 .menu.active {
     display: flex;
+
 }
 
 
@@ -184,6 +186,7 @@ body {
     .menu button {
         padding: 0.8em 1.5em;
         margin-top: 15px;
+        display: block;
     }
 
     .title p {
