@@ -342,6 +342,7 @@ img {
     background-color: #f8f9fa;
     border: none;
     transition: border 0.3s, background-color 0.5s;
+    border: #eba58d00 solid 2px;
   }
 
   .button-container button:hover {
