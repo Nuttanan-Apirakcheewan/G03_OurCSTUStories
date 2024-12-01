@@ -138,7 +138,8 @@ body {
     background-color: #f0f0f0;
     cursor: pointer;
     margin-bottom: 15px;
-    display: none;
+    position: relative;
+    right: -500px;
 }
 
 .menu button a {
