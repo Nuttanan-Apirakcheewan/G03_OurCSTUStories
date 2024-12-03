@@ -161,8 +161,8 @@ body {
   opacity: 1;
 }
 
-footer{
-  padding : 20px;
+footer {
+  padding: 20px;
   background-color: white;
   display: flex;
   justify-content: left;
@@ -171,30 +171,27 @@ footer{
   gap: 35px;
 }
 
-footer img{
-  width:100px;
+footer img {
+  width: 100px;
   height: 100px;
 }
 
-.git
-{
+.git {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-left: -20px;
 }
 
-#git
-{
-  width:50px;
+#git {
+  width: 50px;
   height: 50px;
   margin-left: 15px;
 }
 
-#emailfoot
-{
+#emailfoot {
   border-radius: 50%;
-  width:50px;
+  width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -202,8 +199,7 @@ footer img{
   margin-top: 21px;
 }
 
-.contact
-{
+.contact {
   display: flex;
   justify-content: center;
   font-size: 10px;
@@ -211,18 +207,16 @@ footer img{
 
 }
 
-.container
-{
+.container {
   margin-bottom: 0px;
   margin-left: 12px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
+
 }
 
-.container p a
-{
+.container p a {
 
   text-decoration: none;
   color: black;
@@ -232,14 +226,13 @@ footer img{
   transition: background-color 0.3s, color 0.3s;
 }
 
-.container .strow p a:hover, 
+.container .strow p a:hover,
 .container .ndrow p a:hover {
   background-color: #fad6d6;
   color: black;
 }
 
-.strow
-{
+.strow {
   display: flex;
   margin-top: 5px;
   flex-direction: row;
@@ -247,24 +240,24 @@ footer img{
   justify-content: center;
 }
 
-.ndrow
-{
+.ndrow {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-@media (max-width: 494px){
-  footer{
+
+
+@media (max-width: 494px) {
+  footer {
     display: flex;
     justify-content: center;
 
   }
 
-  .contact
-{
-  margin-top: -60px;
-}
+  .contact {
+    margin-top: -60px;
+  }
 }
 
 
@@ -414,7 +407,7 @@ img {
 
   .card {
     width: 100%;
-    padding: 200px;
+    padding: 300px;
     height: 500px;
     border-radius: 30px;
   }
@@ -776,4 +769,26 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input.invalid,
+textarea.invalid {
+  border: 1px solid red;
+}
+
+input.valid,
+textarea.valid {
+  border: 1px solid green;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
 }

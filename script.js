@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /*hamburger*/
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".menu");
 
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   let lastUsedPictureIndex = -1;
-
+  /*slider for mobile device*/
   function updateSliderPosition() {
     const cardWidth = document.querySelector('.card').offsetWidth + 0;
     cardWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
@@ -63,9 +64,81 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let lastUsedColorIndex = -1;
 
+  /*---------------------------home page form------------------------*/
   document.querySelectorAll('.guestForm').forEach(form => {
-    form.addEventListener('submit', (event) => {
+    const isDesktopForm = form.id === 'desktopForm';
+    const commentSection = isDesktopForm
+      ? document.querySelector('.sidebar')
+      : document.querySelector('.card-wrapper .card:last-child');
+
+    const showError = (input, message) => {
+      let error = input.parentNode.querySelector('.error-message');
+      if (!error) {
+        error = document.createElement('div');
+        error.className = 'error-message';
+        input.parentNode.appendChild(error);
+      }
+      error.textContent = message;
+      input.classList.add('invalid');
+      input.classList.remove('valid');
+    };
+
+    const clearError = (input) => {
+      const error = input.parentNode.querySelector('.error-message');
+      if (error) error.remove();
+      input.classList.remove('invalid');
+      input.classList.add('valid');
+    };
+
+    const resetClasses = (inputs) => {
+      inputs.forEach(input => {
+        input.classList.remove('valid', 'invalid');
+      });
+    };
+
+    const validateField = (input) => {
+      if (input.id === 'nameTh' || input.id === 'surnameTh') {
+        if (!/^[a-zA-Z\s]*$/.test(input.value)) {
+          showError(input, "Only letters and spaces are allowed.");
+          return false;
+        } else {
+          clearError(input);
+        }
+      } else if (input.id === 'email') {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+          showError(input, "Invalid email format.");
+          return false;
+        } else {
+          clearError(input);
+        }
+      } else if (input.id === 'comment') {
+        if (input.value.length > 30 || input.value.trim() === '') {
+          showError(input, "Comment must be 1-30 characters.");
+          return false;
+        } else {
+          clearError(input);
+        }
+      }
+      return true;
+    };
+
+
+    form.addEventListener('input', (event) => {
+      validateField(event.target);
+    });
+
+
+    form.addEventListener('submit', event => {
       event.preventDefault();
+      let isValid = true;
+
+      form.querySelectorAll('input, textarea').forEach(input => {
+        if (!validateField(input)) {
+          isValid = false;
+        }
+      });
+
+      if (!isValid) return;
 
       const isDesktopForm = form.id === 'desktopForm';
       const isMobileForm = form.id === 'mobileForm';
@@ -144,6 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       form.reset();
+      resetClasses(form.querySelectorAll('input, textarea'));
     });
   });
 
